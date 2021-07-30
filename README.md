@@ -1,8 +1,11 @@
 # Personalized Trajectory Prediction via Distribution Discrimination (DisDis)
-The official PyTorch code implementation of "Personalized Trajectory Prediction via Distribution Discrimination" in ICCV 2021.
+The official PyTorch code implementation of "Personalized Trajectory Prediction via Distribution Discrimination" in ICCV 2021,[arxiv](https://arxiv.org/pdf/2107.14204.pdf).
 
 ## Introduction
 The motivation of DisDis is to learn the latent distribution to represent different motion patterns, where the motion pattern of each person is personalized due to his/her habit. We learn the distribution discriminator in a self-supervised manner, which encourages the latent variable distributions of the same motion pattern to be similar while pushing the ones of the different motion patterns away. DisDis is a plug-and-play module which could be integrated with existing multi-modal stochastic predictive models to enhance the discriminative ability of latent distribution. Besides, we propose a new evaluation metric for stochastic trajectory prediction methods. We calculate the probability cumulative minimum distance (PCMD) curve to comprehensively and stably evaluate the learned model and latent distribution, which cumulatively selects the minimum distance between sampled trajectories and ground-truth trajectories from high probability to low probability. PCMD considers the predictions with corresponding probabilities and evaluates the prediction model under the whole latent distribution.
+
+![image](https://github.com/CHENGY12/DisDis/blob/main/images/model_DisDis.png)
+Figure 1. Training process for the DisDis method. DisDis regards the latent distribution as the motion pattern and optimizes the trajectories with the same motion pattern to be close while the ones with different patterns are pushed away, where the same latent distributions are in the same color. For a given history trajectory, DisDis predicts a latent distribution as the motion pattern, and takes the latent distribution as the discrimination to jointly optimize the embeddings of trajectories and latent distributions.
 
 
 ## Requirements
