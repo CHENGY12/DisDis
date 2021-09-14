@@ -55,7 +55,7 @@ The bibtex of our paper 'Personalized Trajectory Prediction via Distribution Dis
 ```
 @inproceedings{Disdis,
   title={Personalized Trajectory Prediction via Distribution Discrimination},
-  author={Chen, Guangyi and Li, Junlong and Zhou, Nuoxing and Ren, Liangzheng and Lu, Jiwen},
+  author={Chen, Guangyi and Li, Junlong and Zhou, Nuoxing and Ren, Liangliang and Lu, Jiwen},
   booktitle={ICCV},
   year={2021}
 }
